@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="object.xsd">
+	<product>BOLIG</product>
+	<type>Innbo</type>
+	<properties>
+		<property>
+			<name>Vei</name>
+			<type>text</type>
+			<locator>pt:sf_c:r1:1:pt:TIADynamicTaskFlowRg:1:pt:TIA_IT1::content</locator>
+		</property>
+		<property>
+			<name>Type</name>
+			<type>dropdown</type>
+			<locator>pt:sf_c:r1:1:pt:TIADynamicTaskFlowRg:1:pt:TIA_OC3::content</locator>
+			<mandatory>true</mandatory>
+		</property>
+		<property>
+			<name>Postnummer og by</name>
+			<type>dropdown</type>
+			<locator>pt:sf_c:r1:1:pt:TIADynamicTaskFlowRg:1:pt:TIA_OC1::content</locator>
+			<mandatory>true</mandatory>
+		</property>
+	</properties>
+	<coverage>
+		<risk>
+			<name>Basis</name>
+			<covered>true</covered>
+			<sum>200</sum>
+			<excess>4000</excess>
+		</risk>
+		<risk>
+			<name>Pant</name>
+			<covered>false</covered>
+		</risk>
+	</coverage>
+</object>

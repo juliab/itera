@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="test_object.xsd" xmlns:xlink="bolig.xml">
+	<product>Bolig</product>
+	<properties>
+		<property name = "type">
+			<value>Hus</value>
+		</property>
+		<property name = "residenceType">
+			<value>Enebolig</value>
+		</property>
+ 		<property name = "year">
+			<value>2006</value>
+		</property>
+		<property name = "grossArea">
+			<value>48</value>
+		</property>
+		<property name = "coverageType">
+			<value>Fullverdi</value>
+		</property>
+		<property name = "numberOfInjuries">
+			<value>0 til 2</value>
+		</property>
+		<property name = "numberOfResidents">
+			<value>1</value>
+		</property>
+		<property name = "isRented">
+			<value>Kun eget bruk</value>
+		</property>
+		<property name = "isListed">
+			<value>false</value>
+		</property>
+		<property name = "waterGuard">
+			<value>true</value>
+		</property>
+		<property name = "fireAlarm">
+			<value>true</value>
+		</property>
+		<property name = "identifyBuilding">
+			<value>Test Hus flytting</value>
+		</property>
+		<property name = "mortgage">
+			<value>false</value>
+		</property>
+	</properties>
+	<coverage>
+		<risk>
+			<name>Basis</name>
+			<covered>true</covered>
+			<excess>8000</excess>
+		</risk>
+		<risk>
+			<name>Naturskade</name>
+			<covered>true</covered>
+		</risk>
+		<risk>
+			<name>Pluss</name>
+			<covered>true</covered>
+		</risk>
+		<risk>
+			<name>Naturskade</name>
+			<covered>true</covered>
+		</risk>
+	</coverage>
+</object>

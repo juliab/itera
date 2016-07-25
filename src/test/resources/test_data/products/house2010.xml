@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<object>
+	<product>Bolig</product>
+	<properties>
+		<property name = "type">
+			<value>Hus</value>
+		</property>
+		<property name = "residenceType">
+			<value>Enebolig</value>
+		</property>
+ 		<property name = "year">
+			<value>2010</value>
+		</property>
+		<property name = "grossArea">
+			<value>100</value>
+		</property>
+		<property name = "coverageType">
+			<value>Fullverdi</value>
+		</property>
+		<property name = "numberOfInjuries">
+			<value>0 til 2</value>
+		</property>
+		<property name = "numberOfResidents">
+			<value>2</value>
+		</property>
+		<property name = "isRented">
+			<value>Kun eget bruk</value>
+		</property>
+		<property name = "isListed">
+			<value>false</value>
+		</property>
+		<property name = "waterGuard">
+			<value>false</value>
+		</property>
+		<property name = "fireAlarm">
+			<value>false</value>
+		</property>
+		<property name = "identifyBuilding">
+			<value>Good house</value>
+		</property>
+		<property name = "mortgage">
+			<value>false</value>
+		</property>
+	</properties>
+	<coverage>
+		<risk>
+			<name>Basis</name>
+			<covered>true</covered>
+			<excess>4000</excess>
+		</risk>
+		<risk>
+			<name>Norsk Hussopp</name>
+			<covered>true</covered>
+		</risk>
+	</coverage>
+</object>

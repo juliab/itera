@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="object">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="product">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="BOLIG" />
+							<!-- ADD PRODUCTS -->
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="type">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Innbo" />
+							<!-- ADD TYPES -->
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="properties">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="property" type="PropertyType"
+								minOccurs="0" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="coverage">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="risk" type="RiskType" minOccurs="0"
+								maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="PropertyType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="type" type="xs:string" minOccurs="0" />
+			<xs:element name="locator" type="xs:string" minOccurs="0" />
+			<xs:element name="mandatory" type="xs:boolean" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RiskType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="covered" type="xs:boolean" minOccurs="0" />
+			<xs:element name="sum" type="xs:integer" minOccurs="0" />
+			<xs:element name="excess" type="xs:integer" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

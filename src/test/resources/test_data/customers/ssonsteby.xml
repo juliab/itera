@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<party>
+	<type>person</type>
+	<id>128295</id>
+	<forename>Sigbrith</forename>
+	<surname>Sønsteby</surname>
+	<address>
+		<country>Norway</country>
+		<city>Oslo</city>
+		<postcode>0973</postcode>
+		<street>Odvar Solbergs Vei</street>
+		<streetno>134</streetno>
+	</address>
+</party>

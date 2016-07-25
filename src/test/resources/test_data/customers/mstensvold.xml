@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<party>
+	<type>person</type>
+	<id>373230</id>
+	<forename>Mona</forename>
+	<surname>Stensvold</surname>
+	<address>
+		<country>Norway</country>
+		<city>Trondheim</city>
+		<postcode>7018</postcode>
+		<street>Kleists Gate</street>
+		<streetno>2</streetno>
+	</address>
+</party>

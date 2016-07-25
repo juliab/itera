@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<party>
+	<type>person</type>
+	<id>373923</id>
+	<forename>Julia</forename>
+	<surname>Siroshtan</surname>
+	<address>
+		<country>Norway</country>
+		<city>Oslo</city>
+		<postcode>0973</postcode>
+		<street>Revierstredet</street>
+		<streetno>18</streetno>
+		<streetcode>E</streetcode>
+	</address>
+</party>
