@@ -79,14 +79,6 @@ public abstract class PanelImpl extends WidgetObjectImpl implements Panel {
         }
         Stream.of(this.getClass().getDeclaredFields()).forEach(f -> f.setAccessible(true));
         
-        if (entity instanceof Property) {
-            String propertyName = getFieldValue(entity, "name").toString();
-            String propertyValue = getFieldValue(entity, "value").toString();
-            
-            fillField(findMatchingControl(propertyName), propertyValue);
-            return;
-        }
-        
         for (Field property : entity.getClass().getDeclaredFields()) {
             property.setAccessible(true);
             Object propertyValue = getFieldValue(entity, property);
@@ -98,11 +90,11 @@ public abstract class PanelImpl extends WidgetObjectImpl implements Panel {
         }
     }
     
-    private void fillField(Editable control, String value) {
+    protected void fillField(Editable control, String value) {
         control.fill(value);
     }
     
-    private Object getFieldValue(FormData entity, String fieldName) {
+    protected Object getFieldValue(FormData entity, String fieldName) {
         Field field;
         try {
             field = entity.getClass().getDeclaredField(fieldName);
@@ -113,7 +105,7 @@ public abstract class PanelImpl extends WidgetObjectImpl implements Panel {
         return getFieldValue(entity, field);
     }
     
-    private Object getFieldValue(FormData entity, Field field) {
+    protected Object getFieldValue(FormData entity, Field field) {
         Object result;
         try {
             result = field.get(entity);
@@ -149,7 +141,7 @@ public abstract class PanelImpl extends WidgetObjectImpl implements Panel {
     /**
      * Waits until file(-s) download completes.
      * Particularly, waits until all new files in the download directory length is not 0 
-     * and file name doesn't have .part extension.
+     * and none of the new files doesn't have .part extension.
      */
     @Override
     public void waitForDownload() {

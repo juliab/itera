@@ -1,6 +1,7 @@
 package no.itera.tia.ui.model.object;
 
 import net.serenitybdd.core.annotations.ImplementedBy;
+import no.itera.tia.ui.model.object.controls.Controls;
 import no.itera.tia.ui.model.object.impl.ObjectPanelImpl;
 import no.itera.tia.ui.panels.Panel;
 

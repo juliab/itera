@@ -1,5 +1,7 @@
 package no.itera.tia.ui.model.object.impl;
 
+import no.itera.tia.beans.model.Property;
+import no.itera.tia.ui.model.object.controls.Controls;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -15,7 +17,7 @@ import no.itera.tia.ui.model.object.ObjectPanel;
 import no.itera.tia.ui.panels.impl.PanelImpl;
 
 public class ObjectPanelImpl extends PanelImpl implements ObjectPanel {
-    
+
     @FindBy(css = "[id$='TIA_IT1::content']") // Vei
     private Input street;
     
@@ -167,14 +169,24 @@ public class ObjectPanelImpl extends PanelImpl implements ObjectPanel {
 		super(page, locator, timeoutInMilliseconds);
 	}
 
+
+
 	@Override
 	public void fillForm(FormData object) {
 	    if (!(object instanceof InsuranceObject)) {
             throw TestException.get("Can't fill insurance object form using entity other than InsuranceObject");
         }
 		expand();
+
 		((InsuranceObject) object).getProperties().stream().forEach(p -> super.fillForm(p));
 	}
+
+    private void fillProperty(Property property) {
+        String propertyName = getFieldValue(property, "name").toString();
+        String propertyValue = getFieldValue(property, "value").toString();
+
+        fillField(controls.init(getPage().getDriver()), propertyValue);
+    }
 	
     public String getStreet() {
         return street.getValue();
